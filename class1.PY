@@ -1,0 +1,5 @@
+name = input("Enter your name")
+age = input("Enter your age")
+address =input("enter your address")
+school = input("enter your school")
+print("Hello", name, "you are", age, "years old", "your address is",  address, " and your school is",  school, )
