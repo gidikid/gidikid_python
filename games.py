@@ -1,3 +1,4 @@
+import random
 import pygame
 
 # Initialize Pygame
@@ -11,11 +12,16 @@ pygame.display.set_caption("Colored Circles")
 
 # Colors dictionary
 colors = {"red": (255, 0, 0), "green": (0, 255, 0), "blue": (0, 0, 255)}
-colo = {"white": (255, 255, 255)}
 
 # Circles list
-circles = [(100, 100, 50, "red"), (200, 200, 30, "green"), (300, 300, 20, "blue")]
-circl = [(400, 400, 10, "white")]
+circles_coulor = colors["red"]
+circle_radius = 70
+
+def get_random_values():
+    end = random.randint
+    x, y = random.randint(10,  (window_width - 10)), random.randint(10,  (window_height - 10))
+    radius = random.randint(10, 50)
+
 # Game loop
 running = True
 while running:
@@ -37,15 +43,4 @@ while running:
                 x, y, radius, color_name = circle
         color = colors[color_name]
         pygame.draw.circle(window, color, (x, y), radius)
-                
         
-                
-
-        
-        
-
-    # Update the display
-    pygame.display.update()
-
-# Quit Pygame
-pygame.quit()
